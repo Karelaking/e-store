@@ -13,7 +13,6 @@ const page = async (): Promise<React.ReactNode> => {
 
   if (user?.role !== Role.UNREGISTERED) {
     redirect("/"); // Redirect to the home page
-    return null;
   }
 
   return (

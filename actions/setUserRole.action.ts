@@ -5,7 +5,7 @@ import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
-export const setUserRole = async (role: Role) => {
+export const setUserRoleAction = async (role: Role) => {
   const { userId } = await auth();
 
   if (!userId) {
