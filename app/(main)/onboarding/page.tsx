@@ -5,6 +5,8 @@ import { Role } from "@/lib/prisma/enums";
 import { checkUser } from "@/lib/checkUser";
 import { redirect } from "next/navigation";
 
+export const dynamic = "force-dynamic"; // Mark this page as dynamic
+
 const page = async (): Promise<React.ReactNode> => {
   const user = await checkUser().catch((e) => {
     console.error(e);
@@ -13,6 +15,7 @@ const page = async (): Promise<React.ReactNode> => {
 
   if (user?.role !== Role.UNREGISTERED) {
     redirect("/"); // Redirect to the home page
+    return null;
   }
 
   return (
