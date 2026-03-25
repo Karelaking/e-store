@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import RootProvider from "@/components/provider/RootProvider";
-import { Footer, Header } from "@/components/server";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,9 +23,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", inter.variable)}
     >
       <body className="min-h-full flex flex-col">
-        <RootProvider>
-          {children}
-        </RootProvider>
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );

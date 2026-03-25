@@ -1,0 +1,1 @@
+export { onboardingAction } from "./onboarding.action";
