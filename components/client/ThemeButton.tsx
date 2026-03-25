@@ -13,14 +13,14 @@ import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <HugeiconsIcon icon={Sun03Icon} />
-          <HugeiconsIcon icon={Moon02Icon} />
+          <HugeiconsIcon icon={Sun03Icon} className={`h-4 w-4 ${theme === "dark" ? "hidden" : "block"}`} />
+          <HugeiconsIcon icon={Moon02Icon} className={`h-4 w-4 ${theme === "dark" ? "block" : "hidden"}`} />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
