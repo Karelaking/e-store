@@ -25,9 +25,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <RootProvider>
-          <Header />
           {children}
-          <Footer />
         </RootProvider>
       </body>
     </html>
