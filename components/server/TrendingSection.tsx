@@ -1,10 +1,11 @@
 import React from "react";
 import { Container } from "./Container";
-import TrendingCard from "./TrendingCard";
-import { TrendingItem } from "@/lib/data/trending-data";
 import { getTrendingItemsAction } from "@/actions";
+import { ProductItems } from "@/types/ProductItems.interface";
+import { ProductCard } from "./ProductCard";
+import { MinimalButton } from "./MinimalButton";
 
-const TrendingSection = async (): Promise<React.ReactNode> => {
+export const TrendingSection = async (): Promise<React.ReactNode> => {
   const trendingItems = await getTrendingItemsAction();
 
   return (
@@ -22,13 +23,12 @@ const TrendingSection = async (): Promise<React.ReactNode> => {
             Shop All Trending
         </div>
       </div>
-      <div className="w-full h-max grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {trendingItems.map((item: TrendingItem) => (
-          <TrendingCard key={item.id} item={item} />
+      <div className="w-full h-max grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20">
+        {trendingItems.map((item: ProductItems) => (
+          <ProductCard key={item.id} item={item} />
         ))}
       </div>
+      <MinimalButton href="/trending" title="Shop All Trending" />
     </Container>
   );
 };
-
-export default TrendingSection;

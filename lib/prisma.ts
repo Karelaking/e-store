@@ -1,22 +1,22 @@
 import { PrismaClient } from "./prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
- 
 
+const databaseUrl = process.env.DATABASE_URL;
 
-export const prisma: PrismaClient = globalThis.prisma || new PrismaClient({
-  adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL }),
-});
+if (!databaseUrl) {
+  throw new Error("DATABASE_URL is not configured.");
+}
 
-prisma.$connect()
-  .then(() => {
-    console.log("Connected to the database successfully.");
-  })
-  .catch((error: unknown) => {
-    console.error("Error connecting to the database:", error);
-    process.exit(1);
+const globalForPrisma = globalThis as typeof globalThis & {
+  prisma?: PrismaClient;
+};
+
+export const prisma: PrismaClient =
+  globalForPrisma.prisma ||
+  new PrismaClient({
+    adapter: new PrismaPg({ connectionString: databaseUrl }),
   });
 
 if (process.env.NODE_ENV !== "production") {
-  globalThis.prisma = prisma;
-  console.log(process.env.NODE_ENV);
+  globalForPrisma.prisma = prisma;
 }

@@ -1,21 +1,21 @@
+import { ProductItems } from "@/types/ProductItems.interface";
 import Image from "next/image";
 import React from "react";
-import { TrendingItem } from "@/lib/data/trending-data";
 
-const TrendingCard = async ({
+export const ProductCard = async ({
   item,
 }: {
-  item: TrendingItem;
+  item: ProductItems;
 }): Promise<React.ReactNode> => {
   return (
     <div className="w-full h-full group cursor-pointer">
       <div className="aspect-3/4 overflow-hidden relative">
-        <Image src={item.imageUrl} alt={item.title} fill className="group-hover:scale-105 transition-transform duration-300"/>
+        <Image src={item.image} alt={item.name} fill className="group-hover:scale-105 transition-transform duration-300"/>
       </div>
       <div className="w-full h-full mt-6 flex justify-between">
         <div className="">
           <h4 className="font-label text-xs uppercase tracking-[0.2em] font-medium">
-            {item.title}
+            {item.name}
           </h4>
           <p className="font-label text-[10px] text-outline mt-1 uppercase tracking-widest">
             {item.description}
@@ -26,5 +26,3 @@ const TrendingCard = async ({
     </div>
   );
 };
-
-export default TrendingCard;

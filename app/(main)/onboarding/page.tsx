@@ -8,10 +8,7 @@ import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic"; // Mark this page as dynamic
 
 const page = async (): Promise<React.ReactNode> => {
-  const user = await checkUser().catch((e) => {
-    console.error(e);
-    process.exit(1);
-  });
+  const user = await checkUser();
 
   if (user?.role !== Role.UNREGISTERED) {
     redirect("/"); // Redirect to the home page
