@@ -4,7 +4,7 @@ import TrendingSection from "@/components/server/TrendingSection";
 
 export default function Home() {
   return (
-    <Container className="max-h-screen overflow-y-scroll w-full">
+    <Container className="w-full">
       <HeroSection />
       <TrendingSection />
     </Container>
