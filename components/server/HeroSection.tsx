@@ -15,14 +15,14 @@ const HeroSection = (): React.ReactNode => {
     <Container className="px-0 sm:px-0 lg:px-0">
       <section className="border-b border-zinc-100 pb-10">
         <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center mb-12">
-          <div className="bg-zinc-800 w-screen md:w-3/5 h-full flex items-center justify-center absolute z-10">
+          <div className="bg-zinc-800 w-screen md:w-3/5 h-full flex items-center justify-center absolute">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEGOimlLAfBMYR_cp8NdBQy6Oa2nqI8uKo6qhBq9g3SJtZRRHl-_p38IA9WCe_2036XYelq-pOj0UP1pisnfN4XpomKuJwL-ALrzVFRCcs-CqNhO7B4lZ4yc3RPKBNzUtc5RH_zoNCs6TlnimvwxjZSyuW_Gz2N-HxrZ65Qgf0YjbT1Oj70dkapSN1R-ZA8JoLcFTQ2DpsmNkhuPhJ0BTbQ-pcc1SscySR24ImE_LUXx_SY2fGYOpvYtzTY92fm-2yZv9lur4E41B5"
               alt="Hero Image"
               loading="eager"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover w-full h-full grayscale-20 transition-all duration-300"
+              className="object-cover w-full h-full grayscale-20 transition-all duration-300 absolute group-hover:grayscale-0 group-hover:scale-105"
             />
           </div>
         </div>
