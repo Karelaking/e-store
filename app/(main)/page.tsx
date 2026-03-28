@@ -4,7 +4,7 @@ import HeroSection from "@/components/server/HeroSection";
 
 export default function Home() {
   return (
-    <Container className="w-full min-h-max px-0">
+    <Container className="w-full min-h-max px-0 sm:px-0 lg:px-0">
       <HeroSection />
       <TrendingSection />
       <NewArrivalsSection />

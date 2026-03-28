@@ -9,8 +9,9 @@ export const ProductCard = async ({
 }): Promise<React.ReactNode> => {
   return (
     <div className="w-full h-full group cursor-pointer">
-      <div className="aspect-3/4 overflow-hidden relative">
-        <Image src={item.image} alt={item.name} fill className="group-hover:scale-105 transition-transform duration-300 object-cover"/>
+      <div className="aspect-3/4 overflow-hidden relative ">
+        <Image src={item.image} alt={item.name} fill className="group-hover:scale-105 transition-transform duration-300 object-cover" loading="eager"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
       <div className="w-full h-full mt-6 flex justify-between">
         <div className="">

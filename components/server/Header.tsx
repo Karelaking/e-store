@@ -14,22 +14,36 @@ import {
   SheetTitle,
   SheetDescription,
 } from "../ui/sheet";
+import { UserButton } from "@clerk/nextjs";
+import { Button } from "../ui/button";
 
 const SideBar = (): React.ReactNode => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <HugeiconsIcon icon={Menu03Icon} />
+        <Button
+          aria-label="Open menu"
+          variant="ghost"
+          className="p-0 w-10 h-10 rounded-full"
+        >
+          <HugeiconsIcon icon={Menu03Icon} />
+        </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="" showCloseButton={false}>
+      <SheetContent
+        side="left"
+        className="z-100 absolute"
+        showCloseButton={false}
+      >
         <SheetHeader>
           <SheetTitle>
             <Logo />
           </SheetTitle>
           <SheetDescription className="mt-20">
-            This sheet doesn&apos;t have a close button in the top-right corner.
-            Click outside to close.
+            This is the sidebar
           </SheetDescription>
+          <div className="mt-6 h-screen flex flex-col justify-end">
+            <UserButton />
+          </div>
         </SheetHeader>
       </SheetContent>
     </Sheet>

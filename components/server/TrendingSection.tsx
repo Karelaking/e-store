@@ -23,7 +23,7 @@ export const TrendingSection = async (): Promise<React.ReactNode> => {
             Shop All Trending
         </div>
       </div>
-      <div className="w-full h-max grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-20">
+      <div className="w-full h-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
         {trendingItems.map((item: ProductItems) => (
           <ProductCard key={item.id} item={item} />
         ))}
