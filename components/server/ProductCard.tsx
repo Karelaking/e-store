@@ -10,7 +10,7 @@ export const ProductCard = async ({
   return (
     <div className="w-full h-full group cursor-pointer">
       <div className="aspect-3/4 overflow-hidden relative">
-        <Image src={item.image} alt={item.name} fill className="group-hover:scale-105 transition-transform duration-300"/>
+        <Image src={item.image} alt={item.name} fill className="group-hover:scale-105 transition-transform duration-300 object-cover"/>
       </div>
       <div className="w-full h-full mt-6 flex justify-between">
         <div className="">

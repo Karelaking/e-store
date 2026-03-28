@@ -10,7 +10,7 @@ export const TrendingSection = async (): Promise<React.ReactNode> => {
 
   return (
     <Container className="flex flex-col">
-      <div className="grid grid-cols-3 mb-20">
+      <div className="grid grid-cols-3 my-20">
         <div className="flex flex-col gap-2.5 col-span-2">
           <span className="uppercase tracking-[0.5em] text-xs font-extralight">
             Essentials

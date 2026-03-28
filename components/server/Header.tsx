@@ -38,7 +38,7 @@ const SideBar = (): React.ReactNode => {
 
 export const Header = (): React.ReactNode => {
   return (
-    <header className="container w-full h-16 flex items-center justify-between px-4 lg:px-12 bg-background/60 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <header className="w-full h-16 md:h-20 flex items-center justify-between px-4 lg:px-12 bg-background/60 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <SideBar />
       <div className="absolute left-1/2 transform -translate-x-1/2">
         <Logo />

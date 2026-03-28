@@ -23,7 +23,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("h-full", "antialiased", inter.variable, manrope.variable)}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col w-full">
         <RootProvider>{children}</RootProvider>
       </body>
     </html>
