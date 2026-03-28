@@ -1,9 +1,9 @@
-import { Container } from "@/components/server";
 import React from "react";
-import { onboardingAction } from "@/actions";
 import { Role } from "@/lib/prisma/enums";
-import { checkUser } from "@/lib/checkUser";
 import { redirect } from "next/navigation";
+import { checkUser } from "@/lib/checkUser";
+import { onboardingAction } from "@/actions";
+import { Container } from "@/components/server";
 
 export const dynamic = "force-dynamic"; // Mark this page as dynamic
 

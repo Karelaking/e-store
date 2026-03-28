@@ -12,7 +12,7 @@ const links = [
 const HeroSection = () => {
   return (
     <Container>
-      <section className="py-12 border-b border-zinc-100">
+      <section className="py-12 border-b border-zinc-100 px-0">
         <div className="mx-auto px-2 grid grid-cols-2 md:grid-cols-4 gap-4">
           {links.map((link) => (
             <Link className="group text-center" href={link.href} key={link.name}>

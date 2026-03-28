@@ -9,7 +9,7 @@ export const NewArrivalsSection = async (): Promise<React.ReactNode> => {
   const newArrivalsItems = await getNewArrivalsAction();
 
   return (
-    <Container className="flex flex-col items-center py-32">
+    <Container className="flex flex-col py-32">
       <div className="text-center mb-20">
         <span className="font-label text-[10px] uppercase tracking-[0.5em] text-gray-400 mb-4 block">
           Seasonal Drop

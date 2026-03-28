@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "./Container";
-import { getTrendingItemsAction } from "@/actions";
-import { ProductItems } from "@/types/ProductItems.interface";
 import { ProductCard } from "./ProductCard";
 import { MinimalButton } from "./MinimalButton";
+import { getTrendingItemsAction } from "@/actions";
+import { ProductItems } from "@/types/ProductItems.interface";
 
 export const TrendingSection = async (): Promise<React.ReactNode> => {
   const trendingItems = await getTrendingItemsAction();
@@ -15,7 +15,7 @@ export const TrendingSection = async (): Promise<React.ReactNode> => {
           <span className="uppercase tracking-[0.5em] text-xs font-extralight">
             Essentials
           </span>
-          <h2 className="text-3xl font-light uppercase wrap-break-word text-manrope">
+          <h2 className="text-3xl font-light uppercase wrap-break-word text-manrope pr-6">
             Trending Pieces
           </h2>
         </div>
@@ -23,7 +23,7 @@ export const TrendingSection = async (): Promise<React.ReactNode> => {
             Shop All Trending
         </div>
       </div>
-      <div className="w-full h-max grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-20">
+      <div className="w-full h-max grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-20">
         {trendingItems.map((item: ProductItems) => (
           <ProductCard key={item.id} item={item} />
         ))}

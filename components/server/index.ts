@@ -5,4 +5,5 @@ export { TrendingSection } from "./TrendingSection";
 export { NewArrivalsSection } from "./NewArrivalsSection";
 export { ProductCard } from "./ProductCard";
 export { MinimalButton } from "./MinimalButton";
-export {CTASection} from "./CTASection";
+export { CTASection } from "./CTASection";
+export { Header } from "./Header";

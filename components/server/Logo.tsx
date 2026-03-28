@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export const Logo = (): React.ReactNode => {
   return (
@@ -10,7 +10,7 @@ export const Logo = (): React.ReactNode => {
           src="/logo.png"
           alt="E-STORE"
           fill
-          sizes=""
+          sizes={"(max-width: 768px) 150px, (max-width: 1200px) 200px, 240px"}
           loading="eager"
         />
       </Link>

@@ -1,5 +1,5 @@
 import { Footer } from "@/components/server";
-import { Header } from "@/components/client";
+import { Header } from "@/components/server";
 import React, { Fragment } from "react";
 
 const layout = ({
